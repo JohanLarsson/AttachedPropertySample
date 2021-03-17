@@ -1,0 +1,17 @@
+﻿<Window
+    x:Class="AttachedPropertySample.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:AttachedPropertySample"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    local:Accent.Brush="HotPink"
+    mc:Ignorable="d">
+    <StackPanel>
+        <Button Background="{Binding RelativeSource={RelativeSource Self}, Path=( local:Accent.Brush)}" Content="2" />
+        <Button Content="2" />
+    </StackPanel>
+</Window>
